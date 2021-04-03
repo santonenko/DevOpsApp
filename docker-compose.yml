@@ -8,7 +8,7 @@ services:
       - 3000:3000
     working_dir: /DevOpsApp
     volumes:
-      - ./:/DevOpsApp
+      - /home/ubuntu/DevOpsApp/node_modules:/DevOpsApp/node_modules
     
     environment:
       MYSQL_HOST: mysql
