@@ -3,6 +3,7 @@ version: "3.7"
 services:
   app:
     image: santonenko/getting-started:latest
+    command: sh -c "yarn install && yarn run dev"
     build: .
     ports:
       - 3000:3000
