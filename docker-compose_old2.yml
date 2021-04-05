@@ -3,12 +3,13 @@ version: "3.7"
 services:
   app:
     image: santonenko/getting-started:latest
+    command: sh -c "yarn install && yarn run dev"
     build: .
     ports:
       - 3000:3000
     working_dir: /DevOpsApp
     volumes:
-      - /home/ubuntu/DevOpsApp/node_modules:/DevOpsApp/node_modules
+      - ./:/DevOpsApp
     
     environment:
       MYSQL_HOST: mysql
